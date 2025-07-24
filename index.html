@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPS_Battle</title>
+  <link rel="stylesheet" href="rps.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <div class="container">
+    <div class="block">
+      <h1 class="title">The Ultimate <b>RPS</b> Battle....</h1>
+      <div class="scoreboard">
+        <h2 class="score" style="font-size:30px;color:#4fc3f7;">ScoreBoard</h2>
+        <div class="marks">
+          <label style="color:aliceblue;">You:</label>
+          <h4 id="yourscore">0</h4>
+          <img src="vs.png" class="vs">
+          <label style="color:aliceblue;">Bot:</label>
+          <h4 id="botscore">0</h4>
+        </div>
+      </div>
+      <label id="msg"></label>
+      <div class="guesscards">
+        <div class="flip-card" id="user-card">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="card.png" alt="you"></div>
+            <div class="flip-back"><img src="card.png" alt="you"></div>
+          </div>
+        </div>
+        <div class="flip-card" id="bot-card">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="card.png" alt="bot"></div>
+            <div class="flip-back"><img src="card.png" alt="bot"></div>
+          </div>
+        </div>
+      </div>
+        <div class="cards" style="display: flex;flex-direction: row;justify-content: space-around;margin-bottom: 10px;">
+          <button class="rock" onclick="rps_game('rock')"></button>
+          <button class="paper" onclick="rps_game('paper')"></button>
+          <button class="scissor" onclick="rps_game('scissor')"></button>
+        </div>
+        <p class="alert" style="text-align: center; margin-bottom: 10px;">choose only one card</p>
+      </div>
+    </div>
+  </div>  
+  <div id="message" style="display: block;">
+  <!-- <div id="result">
+    <div class="result_card">
+    <h1 id="msg">you won the match</h1>
+    <h4 id="points">you: 10|bot: 6</h4>
+    <button class="play-again-btn" onclick="resetgame()">PlayAgain</button>
+    </div>
+  </div>  -->
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>

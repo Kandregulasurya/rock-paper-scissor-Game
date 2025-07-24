@@ -1,0 +1,157 @@
+#result{
+  height: 100vh;
+  width: 100vw;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   background: rgba(red, green, blue, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(red, green, blue, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.result_card{
+  text-align: center;
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px #00ffcc,0 0 60px rgba(0, 255, 204, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  color: white;
+  animation: pop 0.5s ease-in-out;
+  /* background: conic_gradient(from 180deg,red,yellow,lime,cyan,blue,magenta,red); */
+}
+.play-again-btn{
+  height: 40px;
+  padding: 10px;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+.play-again-btn:hover{
+  transform: scale(1.2);
+
+}
+@keyframes pop {
+  from{
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+/* Mobile phones (width ≤ 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    width: 100%;
+    height: 100vh;
+  }
+ 
+  .scoreboard {
+    width: 100%;
+  }
+
+  .guesscards {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .cards {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .rock, .paper, .scissor,
+  .flip-card img {
+    width: 120px;
+    height: 160px;
+  }
+
+  .vs {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  label, h4 {
+    font-size: large;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .guesscards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .rock, .paper, .scissor,
+  .flip-card img {
+    width: 130px;
+    height: 180px;
+  }
+
+  .vs {
+    width: 70px;
+    height: 70px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+/* Small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 85%;
+  }
+
+  .guesscards {
+    justify-content: space-evenly;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .rock, .paper, .scissor {
+    width: 140px;
+    height: 190px;
+  }
+
+  .vs {
+    width: 80px;
+    height: 80px;
+  }
+}
